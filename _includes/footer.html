@@ -1,0 +1,20 @@
+<div class="page__footer-follow">
+  <h3>Connect with Us</h3>
+  <ul class="social-icons">
+    {% if site.author.github %}
+      <li><a href="http://github.com/{{ site.author.github }}">GitHub</a></li> &nbsp;&nbsp;|
+    {% endif %}
+    {% if site.discourse.url %}
+      <li><a href="https://{{ site.discourse.url }}">Community Forum</a></li> &nbsp;&nbsp;|
+    {% endif %}
+    {% if site.slack.url %}
+      <li><a href="http://{{ site.slack.url }}">Slack</a></li> &nbsp;&nbsp;|
+    {% endif %}
+    {% if site.stackoverflow.url %}
+      <li><a href="https://{{ site.stackoverflow.url }}">Stack Overflow</a></li> &nbsp;&nbsp;|
+    {% endif %}
+    {% if site.twitter.username %}
+      <li><a href="https://twitter.com/{{ site.twitter.username }}">Twitter</a></li>
+    {% endif %}
+  </ul>
+</div>

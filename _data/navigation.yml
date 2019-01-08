@@ -1,0 +1,17 @@
+main:
+  - title: Reference
+    url: /reference/
+  - title: Community
+    url: https://www.spinnaker.io/community
+  - title: Blog
+    url: https://blog.spinnaker.io
+
+
+reference:
+  - title: API
+    collapsed: true
+    children:
+    - title: Docs
+      url: /reference/api/docs.html
+    - title: Swagger UI
+      url: /reference/api/swagger-ui/

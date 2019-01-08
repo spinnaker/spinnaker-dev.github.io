@@ -1,0 +1,441 @@
+.cloudproviders {
+    background-color: #52adc8;
+    padding: 20px;
+}
+.cloudproviders .images {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 30px;
+    font-size: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cloudproviders img {
+    max-width: 100%;
+    max-height: 100px;
+    margin: 20px;
+}
+
+.search input {
+    font-family: FontAwesome, $sans-serif;
+}
+
+.suggest-edit {
+    float: right;
+    font-size: $type-size-8;
+}
+
+// mermaid.js sequence diagrams
+.actor {
+  fill: #d8e8ec;
+  stroke: #7a8288;
+}
+text.actor {
+  fill: #7a8288;
+  stroke: none;
+}
+.note {
+  fill: #c0d89d;
+}
+.noteText {
+  fill: #000;
+}
+
+// release changelogs from GitHub Gists
+
+.gist {
+  article.markdown-body {
+    h1 {
+      margin-top: 0;
+      font-size: $type-size-3;
+    }
+
+    h2 {
+      font-size: $type-size-4;
+    }
+
+    h3 {
+      font-size: $type-size-5;
+    }
+
+    h4 {
+      font-size: $type-size-5;
+    }
+
+    h5 {
+      font-size: $type-size-6;
+    }
+
+    h6 {
+      font-size: $type-size-6;
+    }
+  }
+
+  p, dl, li {
+    font-size: 0.7rem;
+  }
+}
+
+.feedback {
+  margin-bottom: 25px;
+}
+
+/*
+   Splash Page
+   ========================================================================== */
+@font-face {
+  font-family: 'Assistant';
+  src: url(https://fonts.googleapis.com/css?family=Assistant);
+/*  src: url(/assets/fonts/SourceSansPro-Light.ttf) format("truetype"); */
+}
+
+$spin-light-blue: #e2f3f6;
+$spin-dark-blue: #139bb4;
+
+@mixin fullscreen {
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+$header-height: 400px;
+
+.spin_header {
+  @include fullscreen();
+  height: $header-height;
+  background-color: $spin-dark-blue;
+  top: 0;
+
+  &__inner_wrap {
+    @include container;
+    @include clearfix;
+
+    padding: 0 0.5em;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+    }
+
+    a:hover {
+      text-decoration: none;
+
+      img {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .masthead {
+    border-bottom-width: 0;
+    background-color: transparent;
+  }
+
+  .greedy-nav {
+    background-color: transparent;
+  }
+
+  &__swoosh {
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 115%;
+    opacity: 0.6;
+  }
+
+  &__text {
+    position: relative;
+    margin-top: 3rem;
+
+    h1, h2 {
+      border: none;
+      color: white;
+      font-weight: 100;
+      margin: 10px;
+      line-height: 1;
+    }
+
+    h1 {
+      font-size: 3.4rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__push_down {
+    margin-top: $header-height + 50px;
+  }
+
+  ul.spin_call_to_action {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+    position: absolute;
+    bottom: 10px;
+
+    li {
+      display: block;
+      float: left;
+      margin-right: 30px;
+      font-weight: 600;
+      font-size: large;
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.splash__item {
+  &-body {
+    text-align: left;
+  }
+
+  &-excerpt {
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  &-teaser {
+    width: 13% !important;
+
+    .best_practices_img {
+      width: 65% !important;
+    }
+  }
+}
+
+h2.splash__item-title {
+  border: none;
+}
+
+.splash__wrapper {
+  @extend .feature__wrapper;
+  border: none;
+  margin-bottom: 0;
+}
+
+.splash__item {
+  @extend .archive__item;
+
+  .splash__item-teaser {
+    @extend .archive__item-teaser;
+    width: 10%;
+    box-shadow: none !important;
+  }
+}
+
+h2.splash__item-title {
+  border: none;
+  padding: 0;
+  color: $spin-dark-blue;
+  font-weight: 100;
+  margin-left: 0;
+  font-family: 'Assistant', sans-serif;
+}
+
+h1.spin__heading {
+  border: none;
+  padding: 0;
+  color: $spin-dark-blue;
+  font-weight: 100;
+  margin-left: 0;
+  font-family: 'Assistant', sans-serif;
+}
+
+.spin_row {
+  width: span(12 of 12);
+  margin-bottom: 1rem;
+  @include clearfix();
+}
+
+.spin_feature_box {
+  &__wrapper {
+    border-top: 10px solid white;
+    border-right: 40px solid white;
+    background-color: #f2f2f2;
+    padding: 1.5rem 2rem .5rem 2rem;
+    @include breakpoint($medium) {
+      height: 200px;
+    }
+  }
+
+  &__title {
+    color: $spin-dark-blue;
+    margin: 0 0 .7rem 0;
+  }
+}
+
+.spin_case_study {
+
+  &__title {
+    font-size: large;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: 0;
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: large;
+    margin-right: 20px;
+  }
+
+  &__img {
+    width: 50%;
+  }
+
+  &__netflix {
+    width: 60%;
+  }
+}
+
+$blue-bar-height: 400px;
+$white-bar-height: 150px;
+$cloud-providers-bar-height: $blue-bar-height + $white-bar-height;
+
+$blue-bar-mobile-height: 840px;
+$cloud-providers-bar-mobile-height: $blue-bar-mobile-height + $white-bar-height;
+
+.spin_cloud_providers {
+  &__swoosh {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    margin-top: 41em;
+    @include breakpoint($medium) {
+      margin-top: 11em;
+    }
+    @include breakpoint($large) {
+      margin-top: 8em;
+    }
+  }
+
+  &__blue {
+    @include fullscreen();
+    background-color: $spin-light-blue;
+    height: $blue-bar-mobile-height;
+    @include breakpoint($medium) {
+      height: $blue-bar-height;
+    }
+  }
+
+  &__wrapper {
+    @include container;
+    @include clearfix;
+
+    padding: 0 0.5em 0 3.25em;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+    }
+  }
+
+  &__push_down {
+    margin-top: $cloud-providers-bar-mobile-height;
+    @include breakpoint($medium) {
+      margin-top: $cloud-providers-bar-height;
+    }
+  }
+
+
+  &__header {
+    border: none;
+    padding: 0;
+    color: $spin-dark-blue;
+    font-weight: 100;
+    margin-left: 0;
+    font-family: 'Assistant', sans-serif;
+    margin-top: 1em;
+  }
+
+  .provider_row {
+    margin-bottom: 1rem;
+    @include clearfix();
+    margin-top: 100px;
+  }
+
+  .spin_cloud_provider {
+
+    &__wrapper {
+      img {
+        display: block;
+        margin: auto;
+      }
+    }
+
+    &__gcp {
+      width: 150px;
+    }
+
+    &__k8s {
+      width: 120px;
+    }
+
+    &__azure {
+      filter: invert(1);
+      width: 300px;
+    }
+
+    &__oracle {
+      width: 300px;
+    }
+
+    &__os {
+      width: 130px;
+    }
+  }
+}
+
+.spinnaker_user {
+  img {
+    width: 230px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .spinnaker_user {
+    &__target, &__schibsted, &__gogo, &__makerbot {
+      width: 110px;
+    }
+  }
+}
+
+.collapsible-section-header {
+  cursor: pointer;
+
+  &:before {
+    font-family: FontAwesome;
+    content: $fa-var-chevron-right;
+    font-size: 0.75em;
+    position: absolute;
+    margin: 0.3em 0 0 -1em;
+    color: $light-gray;
+  }
+
+  &.open:before {
+    content: $fa-var-chevron-down;
+    margin: 0.25em 0 0 -1.4em;
+  }
+}
+
+h3.collapsible-section-header {
+  margin-left: 30px;
+
+  + .collapsible-section {
+    margin-left: 30px;
+  }
+}
+
+li > div.highlighter-rouge {
+  font-size: 0.75em;
+}
+
+div.highlighter-rouge {
+  overflow: auto;
+}
