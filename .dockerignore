@@ -1,0 +1,5 @@
+# Ignore all files to start with, and then override
+*
+!Gemfile*
+!*.gemspec
+s3_website.yml
